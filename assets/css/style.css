@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
@@ -23,6 +24,23 @@ body {
   border-color: black;
 }
 #play-btn:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  transform: scale(1.1);
+}
+
+#rpsButtons {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: skyblue;
+  font-size: 5rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  border-width: 10px;
+  border-color: black;
+}
+
+#rpsButtons:hover {
   cursor: pointer;
   transition: 0.4s;
   transform: scale(1.1);
