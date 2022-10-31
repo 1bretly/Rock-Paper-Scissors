@@ -29,7 +29,7 @@ body {
   transform: scale(1.1);
 }
 
-#rpsButtons {
+.rpsButtons {
   margin: 1rem;
   padding: 1rem;
   background-color: skyblue;
@@ -40,7 +40,8 @@ body {
   border-color: black;
 }
 
-#rpsButtons:hover {
+.rpsButtons:hover {
+  background-color: lawngreen;
   cursor: pointer;
   transition: 0.4s;
   transform: scale(1.1);
