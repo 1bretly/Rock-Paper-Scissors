@@ -11,6 +11,7 @@ let ties = 0
 
 // div for score
 let score = document.getElementById("score")
+let result = document.getElementById("result")
 
 // let for the play button with aEL to call startGame function
 let playBtn = document.getElementById("play-btn")
@@ -44,33 +45,33 @@ function startGame() {
 
 function cpuInput() {
   let cpuChoice = choices[Math.floor(Math.random() * choices.length)]
-  console.log(cpuChoice)
+
   if (cpuChoice === userChoice) {
-    alert("The computer also went " + userChoice + ". It's a tie!")
+    result.innerText = "The computer also went " + userChoice + ". It's a tie!"
     ties++
   }
   if (cpuChoice === "Rock" && userChoice === "Paper") {
-    alert("The computer went Rock. You win!")
+    result.innerText = "The computer went Rock. You win!"
     wins++
   }
   if (cpuChoice === "Rock" && userChoice === "Scissors") {
-    alert("The computer went Rock. You lose!")
+    result.innerText = "The computer went Rock. You lose!"
     losses++
   }
   if (cpuChoice === "Paper" && userChoice === "Rock") {
-    alert("The computer went Paper. You lose!")
+    result.innerText = "The computer went Paper. You lose!"
     losses++
   }
   if (cpuChoice === "Paper" && userChoice === "Scissors") {
-    alert("The computer went Paper. You win!")
+    result.innerText = "The computer went Paper. You win!"
     wins++
   }
   if (cpuChoice === "Scissors" && userChoice === "Rock") {
-    alert("The computer went Scissors. You win!")
+    result.innerText = "The computer went Scissors. You win!"
     wins++
   }
   if (cpuChoice === "Scissors" && userChoice === "Paper") {
-    alert("The computer went Scissors. You lose!")
+    result.innerText = "The computer went Scissors. You lose!"
     losses++
   }
   displayScore()
@@ -78,6 +79,7 @@ function cpuInput() {
 
 function displayScore() {
   score.style.display = "block"
+  result.style.display = "block"
   score.innerText = wins + " -" + losses + " -" + ties
   document.body.appendChild(score)
 }
