@@ -20,7 +20,6 @@ playBtn.addEventListener("click", startGame)
 // also assign the buttons a class and individual id's
 function startGame() {
   playBtn.style.display = "none"
-  score.style.display = "block"
 
   for (let i = 0; i < choices.length; i++) {
     let rpsButtons = document.createElement("button")
@@ -47,30 +46,38 @@ function cpuInput() {
   let cpuChoice = choices[Math.floor(Math.random() * choices.length)]
   console.log(cpuChoice)
   if (cpuChoice === userChoice) {
+    alert("The computer also went " + userChoice + ". It's a tie!")
     ties++
   }
   if (cpuChoice === "Rock" && userChoice === "Paper") {
+    alert("The computer went Rock. You win!")
     wins++
   }
   if (cpuChoice === "Rock" && userChoice === "Scissors") {
+    alert("The computer went Rock. You lose!")
     losses++
   }
   if (cpuChoice === "Paper" && userChoice === "Rock") {
+    alert("The computer went Paper. You lose!")
     losses++
   }
   if (cpuChoice === "Paper" && userChoice === "Scissors") {
+    alert("The computer went Paper. You win!")
     wins++
   }
   if (cpuChoice === "Scissors" && userChoice === "Rock") {
+    alert("The computer went Scissors. You win!")
     wins++
   }
   if (cpuChoice === "Scissors" && userChoice === "Paper") {
+    alert("The computer went Scissors. You lose!")
     losses++
   }
   displayScore()
 }
 
 function displayScore() {
+  score.style.display = "block"
   score.innerText = wins + " -" + losses + " -" + ties
   document.body.appendChild(score)
 }

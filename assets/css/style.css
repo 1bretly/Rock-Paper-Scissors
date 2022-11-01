@@ -38,6 +38,7 @@ body {
   border-color: black;
 }
 #play-btn:hover {
+  background-color: lawngreen;
   cursor: pointer;
   transition: 0.4s;
   transform: scale(1.1);
