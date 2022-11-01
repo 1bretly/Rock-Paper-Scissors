@@ -9,6 +9,9 @@ let wins = 0
 let losses = 0
 let ties = 0
 
+// div for score
+let score = document.getElementById("score")
+
 // let for the play button with aEL to call startGame function
 let playBtn = document.getElementById("play-btn")
 playBtn.addEventListener("click", startGame)
@@ -17,6 +20,7 @@ playBtn.addEventListener("click", startGame)
 // also assign the buttons a class and individual id's
 function startGame() {
   playBtn.style.display = "none"
+  score.style.display = "block"
 
   for (let i = 0; i < choices.length; i++) {
     let rpsButtons = document.createElement("button")
@@ -27,17 +31,14 @@ function startGame() {
     rpsButtons.addEventListener("click", function (e) {
       if (rpsButtons.id === "Rock") {
         userChoice = "Rock"
-        cpuInput()
       }
       if (rpsButtons.id === "Paper") {
         userChoice = "Paper"
-        cpuInput()
       }
       if (rpsButtons.id === "Scissors") {
         userChoice = "Scissors"
-        cpuInput()
       }
-      console.log(userChoice)
+      cpuInput()
     })
   }
 }
@@ -47,36 +48,29 @@ function cpuInput() {
   console.log(cpuChoice)
   if (cpuChoice === userChoice) {
     ties++
-    displayScore()
   }
   if (cpuChoice === "Rock" && userChoice === "Paper") {
     wins++
-    displayScore()
   }
   if (cpuChoice === "Rock" && userChoice === "Scissors") {
     losses++
-    displayScore()
   }
   if (cpuChoice === "Paper" && userChoice === "Rock") {
     losses++
-    displayScore()
   }
   if (cpuChoice === "Paper" && userChoice === "Scissors") {
     wins++
-    displayScore()
   }
   if (cpuChoice === "Scissors" && userChoice === "Rock") {
     wins++
-    displayScore()
   }
   if (cpuChoice === "Scissors" && userChoice === "Paper") {
     losses++
-    displayScore()
   }
+  displayScore()
 }
 
 function displayScore() {
-  let score = document.createElement("div")
-  score.id = "score"
-  score.innerHTML = wins + " -" + losses + " -" + ties
+  score.innerText = wins + " -" + losses + " -" + ties
+  document.body.appendChild(score)
 }
