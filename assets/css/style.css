@@ -18,8 +18,9 @@ body {
 #result {
   padding: 1rem;
   background-color: skyblue;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
+  text-align: center;
   border-radius: 1rem;
   border-style: solid;
   border-width: 10px;
@@ -29,7 +30,7 @@ body {
 
 #score {
   padding: 1rem;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   background-color: skyblue;
   border-radius: 1rem;
@@ -37,6 +38,12 @@ body {
   border-width: 10px;
   border-color: black;
   display: none;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #play-button {
@@ -74,8 +81,43 @@ body {
   transform: scale(1.1);
 }
 
-@media only screen and (max-width: 600px) {
-  #rpsButtons {
-    background-color: brown;
+/* For mobile */
+@media (max-width: 480px) {
+  #result {
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
+
+  #buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rpsButtons {
+    margin: 0.5rem;
+    font-size: 2rem;
+  }
+
+  #score {
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* For tablet */
+@media (min-width: 481px) and (max-width: 800px) {
+  #result {
+    margin: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .rpsButtons {
+    margin: 1.5rem 0.5rem;
+    font-size: 3.5rem;
+  }
+
+  #score {
+    margin: 2rem;
+    font-size: 2.5rem;
   }
 }

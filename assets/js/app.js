@@ -44,6 +44,7 @@ function startGame() {
   }
 }
 
+// function to generate a choice for the cpu
 function cpuInput() {
   let cpuChoice = choices[Math.floor(Math.random() * choices.length)]
 
@@ -78,6 +79,7 @@ function cpuInput() {
   displayScore()
 }
 
+// function to display the score
 function displayScore() {
   score.style.display = "block"
   result.style.display = "block"
