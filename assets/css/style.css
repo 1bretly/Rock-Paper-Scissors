@@ -82,7 +82,7 @@ body {
 }
 
 /* For mobile */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   #result {
     margin: 1rem;
     font-size: 1.5rem;
@@ -96,6 +96,7 @@ body {
   .rpsButtons {
     margin: 0.5rem;
     font-size: 2rem;
+    color: black;
   }
 
   #score {
@@ -105,7 +106,7 @@ body {
 }
 
 /* For tablet */
-@media (min-width: 481px) and (max-width: 800px) {
+@media (min-width: 601px) and (max-width: 1024px) {
   #result {
     margin: 2rem;
     font-size: 2.5rem;
@@ -113,7 +114,7 @@ body {
 
   .rpsButtons {
     margin: 1.5rem 0.5rem;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 
   #score {
