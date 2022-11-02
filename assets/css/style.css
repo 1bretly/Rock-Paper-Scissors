@@ -8,6 +8,8 @@ body {
   background-image: url(../images/RockPaperScissorbackground.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,6 +99,7 @@ body {
   .rpsButtons {
     margin: 0.5rem;
     font-size: 2rem;
+    color: black;
   }
 
   #score {
@@ -115,6 +118,7 @@ body {
   .rpsButtons {
     margin: 1.5rem 0.5rem;
     font-size: 2.5rem;
+    color: black;
   }
 
   #score {
