@@ -1,6 +1,7 @@
 * {
   margin: 0;
   font-family: "Roboto Condensed", sans-serif;
+  color: black;
 }
 
 body {
@@ -96,7 +97,6 @@ body {
   .rpsButtons {
     margin: 0.5rem;
     font-size: 2rem;
-    color: black;
   }
 
   #score {

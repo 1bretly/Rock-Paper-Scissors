@@ -49,31 +49,35 @@ function cpuInput() {
   let cpuChoice = choices[Math.floor(Math.random() * choices.length)]
 
   if (cpuChoice === userChoice) {
-    result.innerText = "The computer also went " + userChoice + ". It's a tie!"
+    result.innerHTML =
+      "The computer also went " +
+      cpuChoice.toLowerCase() +
+      ".<br />" +
+      "It's a tie!"
     ties++
   }
   if (cpuChoice === "Rock" && userChoice === "Paper") {
-    result.innerText = "The computer went Rock. You win!"
+    result.innerHTML = "The computer went rock. <br /> You win!"
     wins++
   }
   if (cpuChoice === "Rock" && userChoice === "Scissors") {
-    result.innerText = "The computer went Rock. You lose!"
+    result.innerHTML = "The computer went rock. <br /> You lose!"
     losses++
   }
   if (cpuChoice === "Paper" && userChoice === "Rock") {
-    result.innerText = "The computer went Paper. You lose!"
+    result.innerHTML = "The computer went paper. <br /> You lose!"
     losses++
   }
   if (cpuChoice === "Paper" && userChoice === "Scissors") {
-    result.innerText = "The computer went Paper. You win!"
+    result.innerHTML = "The computer went paper. <br /> You win!"
     wins++
   }
   if (cpuChoice === "Scissors" && userChoice === "Rock") {
-    result.innerText = "The computer went Scissors. You win!"
+    result.innerHTML = "The computer went scissors. <br /> You win!"
     wins++
   }
   if (cpuChoice === "Scissors" && userChoice === "Paper") {
-    result.innerText = "The computer went Scissors. You lose!"
+    result.innerHTML = "The computer went scissors. <br /> You lose!"
     losses++
   }
   displayScore()
@@ -83,5 +87,5 @@ function cpuInput() {
 function displayScore() {
   score.style.display = "block"
   result.style.display = "block"
-  score.innerText = wins + " -" + losses + " -" + ties
+  score.innerHTML = wins + " -" + losses + " -" + ties
 }
