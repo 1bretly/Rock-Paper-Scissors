@@ -10,8 +10,8 @@ let losses = 0
 let ties = 0
 
 // divs for score, results, buttons
-let score = document.getElementById("score")
 let result = document.getElementById("result")
+let score = document.getElementById("score")
 let buttons = document.getElementById("buttons")
 
 // let for the play button with aEL to call startGame function
