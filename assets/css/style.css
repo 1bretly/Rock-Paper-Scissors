@@ -21,7 +21,7 @@ body {
 #result {
   padding: 1rem;
   background-color: skyblue;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
   border-radius: 1rem;
@@ -33,7 +33,7 @@ body {
 
 #score {
   padding: 1rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   background-color: skyblue;
   border-radius: 1rem;
@@ -51,7 +51,7 @@ body {
 
 #play-button {
   padding: 1rem;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: bold;
   background-color: skyblue;
   border-radius: 1rem;
@@ -67,9 +67,9 @@ body {
 }
 
 .rpsButtons {
-  margin: 5rem 1.5rem;
+  margin: 2rem 1rem;
   padding: 1rem;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   background-color: skyblue;
   border-radius: 1rem;
@@ -85,7 +85,7 @@ body {
 }
 
 /* For mobile */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   #result {
     padding: 0.5rem;
     margin: 1rem;
@@ -112,23 +112,109 @@ body {
 }
 
 /* For tablet */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 768px) {
+  #result {
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+  }
+
+  #buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .rpsButtons {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 2rem;
+    color: black;
+  }
+
+  #score {
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+  }
+}
+
+/* For laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
   #result {
     padding: 0.75rem;
-    margin: 2rem;
+    margin: 1rem;
     font-size: 2.5rem;
+  }
+
+  #buttons {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .rpsButtons {
     padding: 0.75rem;
-    margin: 1.5rem 0.5rem;
+    margin: 1rem;
     font-size: 2.5rem;
     color: black;
   }
 
   #score {
     padding: 0.75rem;
-    margin: 2rem;
+    margin: 1rem;
     font-size: 2.5rem;
+  }
+}
+
+/* For desktop */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  #result {
+    padding: 0.75rem;
+    margin: 1rem;
+    font-size: 2.5rem;
+  }
+
+  #buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .rpsButtons {
+    padding: 0.75rem;
+    margin: 1rem;
+    font-size: 2.5rem;
+    color: black;
+  }
+
+  #score {
+    padding: 0.75rem;
+    margin: 1rem;
+    font-size: 2.5rem;
+  }
+}
+
+/* Media query for height */
+@media (max-height: 600px) {
+  #result {
+    padding: 0.35rem;
+    margin: 1rem;
+    font-size: 1.75rem;
+  }
+
+  #buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .rpsButtons {
+    padding: 0.35rem;
+    margin: 0.25rem;
+    font-size: 1.75rem;
+    color: black;
+  }
+
+  #score {
+    padding: 0.35rem;
+    margin: 1rem;
+    font-size: 1.75rem;
   }
 }

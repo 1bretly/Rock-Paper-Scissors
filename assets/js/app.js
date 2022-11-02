@@ -1,7 +1,7 @@
 // let for the possible choices of rock, paper, or scissors
 let choices = ["Rock", "Paper", "Scissors"]
 
-// empty let for user that we will log a value for
+// Empty let for user that we will log a value for
 let userChoice
 
 // const/let for keeping track of score
@@ -19,7 +19,7 @@ let playButton = document.getElementById("play-button")
 playButton.addEventListener("click", startGame)
 
 // startGame function to hide the play button and create new buttons for each choice: Rock, Paper, or Scissors
-// also assign the buttons a class and individual id's
+// Also assign the buttons a class and individual id's
 function startGame() {
   playButton.style.display = "none"
 
