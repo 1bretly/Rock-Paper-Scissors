@@ -8,8 +8,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
 }
@@ -17,41 +18,38 @@ body {
 #result {
   padding: 1rem;
   background-color: skyblue;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
   border-radius: 1rem;
   border-style: solid;
   border-width: 10px;
   border-color: black;
-  position: absolute;
-  top: 25%;
   display: none;
 }
 
 #score {
   padding: 1rem;
-  background-color: skyblue;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
+  background-color: skyblue;
   border-radius: 1rem;
   border-style: solid;
   border-width: 10px;
   border-color: black;
-  position: absolute;
-  bottom: 25%;
   display: none;
 }
 
-#play-btn {
+#play-button {
   padding: 1rem;
-  background-color: skyblue;
   font-size: 5rem;
   font-weight: bold;
+  background-color: skyblue;
   border-radius: 1rem;
   border-width: 10px;
   border-color: black;
 }
-#play-btn:hover {
+
+#play-button:hover {
   background-color: lawngreen;
   cursor: pointer;
   transition: 0.4s;
@@ -59,11 +57,11 @@ body {
 }
 
 .rpsButtons {
-  margin: 1rem;
+  margin: 5rem 1.5rem;
   padding: 1rem;
-  background-color: skyblue;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
+  background-color: skyblue;
   border-radius: 1rem;
   border-width: 10px;
   border-color: black;
@@ -76,22 +74,8 @@ body {
   transform: scale(1.1);
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
-  .rpsButtons {
-    margin: 2.25rem 0.5rem 0rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  #result {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-  }
-  #score {
-    font-style: 1rem;
-    font-weight: bold;
-    text-align: center;
+@media only screen and (max-width: 600px) {
+  #rpsButtons {
+    background-color: brown;
   }
 }

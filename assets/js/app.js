@@ -9,25 +9,26 @@ let wins = 0
 let losses = 0
 let ties = 0
 
-// div for score
+// divs for score, results, buttons
 let score = document.getElementById("score")
 let result = document.getElementById("result")
+let buttons = document.getElementById("buttons")
 
 // let for the play button with aEL to call startGame function
-let playBtn = document.getElementById("play-btn")
-playBtn.addEventListener("click", startGame)
+let playButton = document.getElementById("play-button")
+playButton.addEventListener("click", startGame)
 
 // startGame function to hide the play button and create new buttons for each choice: Rock, Paper, or Scissors
 // also assign the buttons a class and individual id's
 function startGame() {
-  playBtn.style.display = "none"
+  playButton.style.display = "none"
 
   for (let i = 0; i < choices.length; i++) {
     let rpsButtons = document.createElement("button")
     rpsButtons.innerHTML = choices[i]
     rpsButtons.className = "rpsButtons"
     rpsButtons.id = choices[i]
-    document.body.appendChild(rpsButtons)
+    buttons.appendChild(rpsButtons)
     rpsButtons.addEventListener("click", function (e) {
       if (rpsButtons.id === "Rock") {
         userChoice = "Rock"
@@ -81,5 +82,4 @@ function displayScore() {
   score.style.display = "block"
   result.style.display = "block"
   score.innerText = wins + " -" + losses + " -" + ties
-  document.body.appendChild(score)
 }
