@@ -11,7 +11,7 @@ This is a rock, paper, scissors game application that features:
 
 ## Preview of the deployed application
 
-![Code Quiz](./assets/images/rps.gif)
+![Rock, Paper, Scissors](./assets/images/rps.gif)
 
 ## See it live!
 
